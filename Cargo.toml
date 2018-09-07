@@ -5,7 +5,7 @@ authors = ["Gu Junhua <jhgu@nao.cas.cn>"]
 
 
 [lib]
-name = "pyef"
+name = "native"
 crate-type = ["cdylib"]
 
 
