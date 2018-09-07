@@ -339,7 +339,7 @@ pub fn read_file(name: &str) -> PyResult<EventFile> {
 }
 
 #[pymodinit]
-fn pyef(_py: Python, m: &PyModule) -> PyResult<()> {
+fn native(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<EventFile>()?;
     m.add_class::<FileHeader>()?;
     m.add_class::<Event>()?;
