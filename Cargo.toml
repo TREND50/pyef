@@ -1,0 +1,20 @@
+[package]
+name = "pyef"
+version = "0.1.0"
+authors = ["Gu Junhua <jhgu@nao.cas.cn>"]
+
+
+[lib]
+name = "pyef"
+crate-type = ["cdylib"]
+
+
+[dependencies]
+rayon = "1.0.2"
+
+[dependencies.pyo3]
+git="https://github.com/PyO3/pyo3.git"
+features = ["extension-module"]
+
+[dependencies.gp_daq]
+path="../gp_daq"
