@@ -1,5 +1,11 @@
 # Python Package for Reading the Eventfile
 
+## Supported python version
+This lib relies on [pyo3](https://github.com/PyO3/pyo3.git), which
+supports both python 2 and 3. However in order to support different
+python version, some parameters must be set when compiling this (pyef)
+lib. So currently I decide to only support python3.
+
 ## Installation
 
 To make everything tidy and clean, we create a new directory to contain
