@@ -7,8 +7,11 @@ python version, some parameters must be set when compiling this (pyef)
 lib. So currently I decide to only support python3.
 
 ## Installation
+0. The environment of [RUST](http://www.rust-lang.org) should be
+installed beforehand. Read the installation guide of
+[gp_daq](https://github.com/TREND50/gp_daq) as a reference.
 
-To make everything tidy and clean, we create a new directory to contain
+1. To make everything tidy and clean, we create a new directory to contain
 everything needed and no other things, for example:
 ```
 $> export BUILD_ROOT='$HOME/build'
@@ -16,14 +19,20 @@ $> mkdir $BUILD_ROOT
 $> cd $BUILD_ROOT
 ```
 
-Then get necessary libs:
+2. Then get necessary libs:
 ```
 $> git clone https://github.com/PyO3/pyo3.git
 $> git clone git@github.com:TREND50/gp_daq.git
 $> git clone git@github.com:astrojhgu/pyef.git
 ```
 
-change the directory
+3. Install necessary python packages:
+```
+sudo pip install setuptools-rust
+sudo pip install setuptools
+```
+
+4. change the directory
 ```
 $> cd pyef
 ```
