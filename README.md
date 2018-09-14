@@ -14,7 +14,7 @@ installed beforehand. Read the installation guide of
 1. To make everything tidy and clean, we create a new directory to contain
 everything needed and no other things, for example:
 ```
-$> export BUILD_ROOT='$HOME/build'
+$> export BUILD_ROOT='$HOME/build' #can be set as other path
 $> mkdir $BUILD_ROOT
 $> cd $BUILD_ROOT
 ```
@@ -28,8 +28,8 @@ $> git clone git@github.com:astrojhgu/pyef.git
 
 3. Install necessary python packages:
 ```
-sudo pip install setuptools-rust
-sudo pip install setuptools
+$> sudo pip install setuptools-rust
+$> sudo pip install setuptools
 ```
 
 4. change the directory
