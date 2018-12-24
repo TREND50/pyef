@@ -1,20 +1,19 @@
-[package]
-name = "pyef"
-version = "0.1.0"
-authors = ["Gu Junhua <jhgu@nao.cas.cn>"]
-
-
-[lib]
-name = "native"
-crate-type = ["cdylib"]
-
-
 [dependencies]
-rayon = "1.0.2"
-
-[dependencies.pyo3]
-path="../pyo3"
-features = ["extension-module"]
+rayon = '1.0.3'
 
 [dependencies.gp_daq]
-path="../gp_daq"
+path = '../gp_daq'
+#git='https://github.com/TREND50/gp_daq.git'
+
+[dependencies.pyo3]
+features = ['extension-module']
+version = '0.5.2'
+
+[lib]
+crate-type = ['cdylib']
+name = 'native'
+
+[package]
+authors = ['Gu Junhua <jhgu@nao.cas.cn>']
+name = 'pyef'
+version = '0.1.0'
