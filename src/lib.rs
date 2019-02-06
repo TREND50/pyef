@@ -4,12 +4,13 @@
 // https://github.com/tildeio/helix-website/blob/master/crates/word_count/src/lib.rs
 #![feature(specialization)]
 
-#[macro_use]
 extern crate pyo3;
 
 extern crate gp_daq;
 
 use pyo3::prelude::*;
+use pyo3::wrap_pyfunction;
+
 use std::fs::File;
 
 use gp_daq::io::event_file::EventFile as RawEventFile;
@@ -339,7 +340,7 @@ pub fn read_file(name: &str) -> PyResult<EventFile> {
     })
 }
 
-#[pymodinit]
+#[pymodule]
 fn native(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<EventFile>()?;
     m.add_class::<FileHeader>()?;
@@ -347,6 +348,6 @@ fn native(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_class::<EventHeader>()?;
     m.add_class::<LocalStation>()?;
     m.add_class::<LocalStationHeader>()?;
-    m.add_function(wrap_function!(read_file))?;
+    m.add_wrapped(wrap_pyfunction!(read_file))?;
     Ok(())
 }

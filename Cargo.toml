@@ -3,11 +3,10 @@ rayon = '1.0.3'
 
 [dependencies.gp_daq]
 path = '../gp_daq'
-#git='https://github.com/TREND50/gp_daq.git'
 
 [dependencies.pyo3]
 features = ['extension-module']
-version = '0.5.2'
+version = '0.6.0-alpha.2'
 
 [lib]
 crate-type = ['cdylib']
