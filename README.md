@@ -1,5 +1,18 @@
 # Python Package for Reading the Eventfile
 
+
+### OMH 11/02/2019
+Prerequisite: 
+- python3
+- rust
+- Python libraries:
+setuptools
+setuptools-rust
+
+./setup.py build
+sudo .:setup install
+
+
 ## Supported python version
 This lib relies on [pyo3](https://github.com/PyO3/pyo3.git), which
 supports both python 2 and 3. However in order to support different
