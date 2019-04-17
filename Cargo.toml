@@ -6,7 +6,7 @@ path = '../gp_daq'
 
 [dependencies.pyo3]
 features = ['extension-module']
-version = '0.6.0-alpha.2'
+version = '0.6.0'
 
 [lib]
 crate-type = ['cdylib']
