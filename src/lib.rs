@@ -1,5 +1,5 @@
 #![allow(clippy::cast_ptr_alignment)]
-#![feature(custom_attribute)]
+
 // Source adopted from
 // https://github.com/tildeio/helix-website/blob/master/crates/word_count/src/lib.rs
 #![feature(specialization)]
